@@ -83,7 +83,7 @@ git clone https://github.com/jannprodriguez/Proyecto-Final.git
 ## 2. Abrir la carpeta del proyecto
 
 ```bash
-cd final_project
+cd Proyecto-Final
 ```
 
 ---
