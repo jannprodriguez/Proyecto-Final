@@ -75,7 +75,7 @@ Tablas principales:
 ## 1. Clonar el repositorio
 
 ```bash
-git clone https://github.com/TU_USUARIO/TU_REPOSITORIO.git
+git clone https://github.com/jannprodriguez/Proyecto-Final.git
 ```
 
 ---
