@@ -1,0 +1,4 @@
+### Obtener ticket por ID (GET)
+
+GET http://localhost:5000/api/tickets/6
+Content-Type: application/json

@@ -1,0 +1,12 @@
+### Crear un nuevo ticket (POST)
+
+POST http://localhost:5000/api/tickets
+Content-Type: application/json
+
+{
+    "asunto": "No puedo acceder al sistema",
+    "descripcion": "El usuario recibe error al iniciar sesión",
+    "prioridad": "Alta",
+    "estado": "Abierto",
+    "usuario_id": 4
+}

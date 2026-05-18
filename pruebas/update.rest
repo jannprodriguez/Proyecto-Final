@@ -1,0 +1,9 @@
+### Actualizar un ticket (PUT)
+
+PUT http://localhost:5000/api/tickets/6
+Content-Type: application/json
+
+{
+    "estado": "En proceso",
+    "prioridad": "Media"
+}

@@ -1,0 +1,69 @@
+{% extends "layout.html" %}
+{% block title %}Dashboard{% endblock %}
+{% block content %}
+
+<div class="row">
+  <div class="col">
+    <h3>Ticket Management</h3>
+  </div>
+
+  <div class="col text-end">
+    <a class="btn btn-primary mb-3 me-2" href="{{ url_for('main.tickets') }}">
+      <i class="bi bi-plus"></i> New
+    </a>
+  </div>
+</div>
+
+<table class="table table-bordered table-hover">
+  <thead class="table-light">
+    <tr>
+      <th>Asunto</th>
+      <th>Descripción</th>
+      <th>Prioridad</th>
+      <th>Estado</th>
+      <th>Usuario</th>
+      <th>Técnico</th>
+      <th class="text-center">Actions</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    {% for ticket in tickets %}
+    <tr>
+      <td>{{ ticket.asunto }}</td>
+      <td>{{ ticket.descripcion }}</td>
+      <td>{{ ticket.prioridad }}</td>
+      <td>{{ ticket.estado }}</td>
+      <td>{{ ticket.usuario.username if ticket.usuario else 'N/A' }}</td>
+      <td>{{ ticket.tecnico.username if ticket.tecnico else 'Sin asignar' }}</td>
+
+      <td class="text-center ps-0 pe-0">
+        <a
+          class="btn btn-sm btn-warning"
+          href="{{ url_for('main.editar_ticket', id=ticket.id) }}"
+          title="Edit ticket"
+        >
+          <i class="bi bi-pencil"></i>
+        </a>
+
+        <form
+          method="POST"
+          action="{{ url_for('main.eliminar_ticket', id=ticket.id) }}"
+          style="display: inline"
+          onsubmit="return confirm('Are you sure you want to delete this ticket?');"
+        >
+          <button
+            type="submit"
+            class="btn btn-sm btn-danger"
+            title="Delete ticket"
+          >
+            <i class="bi bi-trash"></i>
+          </button>
+        </form>
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+{% endblock %}
