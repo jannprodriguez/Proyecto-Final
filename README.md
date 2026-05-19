@@ -75,7 +75,7 @@ Tablas principales:
 ## 1. Clonar el repositorio
 
 ```bash
-git clone https://github.com/TU_USUARIO/TU_REPOSITORIO.git
+git clone https://github.com/jannprodriguez/Proyecto-Final.git
 ```
 
 ---
@@ -83,7 +83,7 @@ git clone https://github.com/TU_USUARIO/TU_REPOSITORIO.git
 ## 2. Abrir la carpeta del proyecto
 
 ```bash
-cd final_project
+cd Proyecto-Final
 ```
 
 ---
